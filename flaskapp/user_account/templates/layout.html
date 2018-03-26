@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Application</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <style>
+      .errors {color: red;}
+      .flash {
+        background-color: #f5f5b3;
+        padding: 10px;
+      }
+      .navbar {
+        border-bottom: solid 1px;
+      }
+      body{
+        background-color: #e4e0e0;
+        height: 100vh;
+      }
+
+    </style>
+</head>
+
+<body>
+  
+  {% with messages = get_flashed_messages() %}
+     {% if messages %}
+        <div class="flash">
+          {% for message in messages %}
+             {{ message }}
+          {% endfor %}
+        </div>
+     {% endif %}
+  {% endwith %}
+
+{% block body %}{% endblock %}
+</body>

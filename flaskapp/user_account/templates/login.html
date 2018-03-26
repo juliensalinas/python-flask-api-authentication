@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+    <section class="section">
+        <div class="container">
+
+            <h1 class="title">Login</h1>
+
+            {% from "_formhelpers.html" import render_field %}
+            <form method=post> {{ form.csrf_token }}
+                {{ render_field(form.email) }}
+                {{ render_field(form.password) }}
+              <input type=submit value=Login>
+            </form>
+            <br>
+            <a href="{{ url_for('user_account_pages.register') }}">Register</a><br>
+            <a href="{{ url_for('user_account_pages.get_pwd_reset_email') }}">Forgot your password?</a>
+
+        </div>
+    </section>
+
+{% endblock %}

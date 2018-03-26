@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    {{current_user.email}}
+                </div>
+                <div class="navbar-item">
+                    <a href="{{ url_for('user_account_pages.logout') }}" title="Logout"><i style="color: #ce4040; font-size: 30px;" class="fas fa-sign-out-alt"></i></a>
+                </div>
+            </div>
+            
+
+        </div>
+    </nav>
+
+    <section class="section">
+        <div class="container">
+
+            <h1 class="title">Welcome!</h1><br>
+            <h2 class="subtitle">Here is your API token. You will need it to use the API. Please make sure to keep it private.</h2>
+            <div class="card">
+                <div class="card-content">
+                    <p style="word-wrap:break-word;"><b>{{api_token}}</b></p>
+                </div>
+            </div>
+            <br>
+            <h2 class="subtitle">Copy paste your token and <a href="{{ url_for('api.doc') }}">click here to use the API now!</a></h2>
+
+        </div>
+    </section>
+
+{% endblock %}

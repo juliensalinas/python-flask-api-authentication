@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<section class="section">
+    <div class="container">
+
+        <h1 class="title">Please set your new password.</h1>
+
+        {% from "_formhelpers.html" import render_field %}
+        <form method=post> {{ form.csrf_token }}
+            {{ render_field(form.password) }}
+            {{ render_field(form.confirm) }}
+            <input type=submit value=Send>
+        </form>
+
+    </div>
+</section>
+
+{% endblock body %}
