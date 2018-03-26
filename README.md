@@ -25,7 +25,7 @@ docker run \
 --env "LOG_FILE_PATH=/var/log/flaskapp" \
 --detach \
 --name my_container \
-my_acoount/my_repo:my_tag
+my_account/my_repo:my_tag
 ```
 
 # Database migrations
