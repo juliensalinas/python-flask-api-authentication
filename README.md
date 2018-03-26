@@ -1,10 +1,10 @@
 # Purpose
 
 Flask application which is:
-* an API for data science simulations
-* storage of user data science files
-* a user web interface
-* an API documentation through swagger
+* a simple API with restricted access to premium users only
+* JWT authentication
+* a Swagger documentation
+* a user web interface for registration with email activation, lost password recovery, and token retrieval
 
 # Dev
 
