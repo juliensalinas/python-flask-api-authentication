@@ -18,7 +18,6 @@ Here is the command in order to create and launch a Docker container in producti
 
 ```
 docker run \ 
---rm \
 --publish 80:80 \
 --volume /var/log/flaskapp:var/log/flaskapp \
 --volume /home/user_files/flaskapp:/home/user_files/flaskapp \
